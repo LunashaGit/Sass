@@ -112,8 +112,8 @@ $btns:              // index
     @extend .navbar
 }
 
-@for $i from 1 through 4 {
-    .a-#{$i}{
-        opacity: ($i * 0.25);
+@for $i from 1 through 3 {
+    .btn#{$i}{
+        opacity: ($i * 0.33);
     }
 } //SASS
