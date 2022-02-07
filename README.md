@@ -7,11 +7,12 @@ Sass Becode
 
 He have many different installation :
 
-    Standalone -> Just download the [file](https://github.com/sass/dart-sass/releases) in Github and move the file in your repository/Folder
+    Standalone -> Just download the file in Github and move the file in your repository/Folder
     NodeJS -> npm install -g sass
     Chocolatey -> choco install sass
     brew -> brew install sass/sass/sass
 
+[FileStandalone](https://github.com/sass/dart-sass/releases)
 ## What is Sass ?
 
 Sass is an Extension and Pre processor for CSS3
@@ -61,7 +62,7 @@ You can import another file in your style.scss(Example)
 
 ![](img/importCode.png)
 
-## @mixin
+## @Mixin
 
 Imagine, you need to give many code for many class, id, (More)...
 
@@ -100,3 +101,100 @@ The output :
         color: red;
     }
 
+## @Extend
+
+Okay, so, now image you need the SAME code than another class but take a Mixin for 2 class is not creative & productive :
+
+You can use @extend
+
+    .navbar{
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2.50%;
+        li{
+            display: inline;
+            margin-left: 5%;
+            margin-right: 5%;
+            a{
+                text-decoration: none;
+                color: #000;
+                @include button()
+            }
+        }
+    }
+
+    .navbar-sass{
+        @extend .navbar
+    }
+
+The output :
+
+    .navbar, .navbar-sass{
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2.50%;
+    }
+
+    .navbar, .navbar-sass li{
+        display: inline;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .navbar, .navbar-sass li a{
+        text-decoration: none;
+        color: #000;
+        @include button()
+    }
+
+## @if & @Else
+
+Simple If & Else exist in SASS
+
+Just a example :
+
+    .btn {
+        text-decoration: none;
+        background: $primary;
+    @if (lightness($primary) > 50%) {
+        color: #000;
+    } @else {
+        color: #FFF;
+    }
+}
+
+## @Each
+
+Here, i give a example with 2 value, but you can do with more value or a simple value :
+    
+    nth($variable, 1)
+
+nth give the value of the variable and the number, here: 1 give you the value
+
+![](img/eachCode.png)
+
+He take the nth:1 so he take the list "btn"
+And he return the nth:2 so he return the color for the nth:1
+
+## @for (Loop)
+
+Here, i give you an example for the opacity, but you can do something else
+
+for $variable from number/variable through number/variable {
+    Do a Action
+} 
+
+![](img/forCode.png)
+![](img/forHTMLCode.png)
+
+## It's over
+
+After 1 hour ! I finished this README.md ! Thanks if you read my "Tutorial"
+
+[My Github](https://github.com/LunashaGit)
