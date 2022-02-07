@@ -29,6 +29,15 @@ _.scss .sass can't be read by browser._
     **Easy To learn (2 Syntax)**
     **Win Time and Organisation**
 
+## How you can setup SASS :
+The first part is the target SASS file (Compiler)
+The Second Part is your scss file
+and the third part is for the output file
+
+./foldername/sass ./foldername/style.scss output.css 
+
+_You can write ' --watch ' after the command if you not like save with the command all time!_
+
 ## SASS VS SCSS
 
 ![](img/sassCode.png) ![](img/scssCode.png)
