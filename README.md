@@ -173,12 +173,12 @@ Just a example :
     .btn {
         text-decoration: none;
         background: $primary;
-    @if (lightness($primary) > 50%) {
-        color: #000;
-    } @else {
-        color: #FFF;
+        @if (lightness($primary) > 50%) {
+            color: #000;
+        } @else {
+            color: #FFF;
+        }
     }
-}
 
 ## @Each
 
