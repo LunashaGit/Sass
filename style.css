@@ -31,7 +31,7 @@ body {
   font-size: 40px;
 }
 .navbar li a:hover, .navbar-sass li a:hover {
-  color: red;
+  color: black;
 }
 
 @media screen and (max-width: 786px) {
@@ -55,7 +55,21 @@ body {
 
 .index-p {
   text-align: center;
-  color: blue;
+}
+
+#index-p1 {
+  background: #520eed;
+  color: #FFF;
+}
+
+#index-p2 {
+  background: #dd282b;
+  color: #000;
+}
+
+#index-p3 {
+  background: #5bbfef;
+  color: #000;
 }
 
 .btn1 {

@@ -2,7 +2,7 @@
 
 @mixin button{ //NAV
     &:hover{
-        color: red;
+        color: black;
     }
 }
 
@@ -61,18 +61,40 @@ body{ //ALL
     width: 30%;
 }
 
-$ifelse: 1; // index
+$color: rgb(random(255), random(255), random(255));
+$color2: rgb(random(255), random(255), random(255));
+$color3: rgb(random(255), random(255), random(255));
 
 .index-p{               //index
     text-align: center;
-    @if $ifelse < 2{
-        color: blue;
-        @debug $ifelse;
+}
+
+#index-p1{
+    background: $color;
+    @if (lightness($color) < 50%){
+        color: #FFF;
     } @else {
-        color: red;
+        color: #000;
     }
 }
 
+#index-p2{
+    background: $color2;
+    @if(lightness($color2) < 50%){
+        color: #FFF;
+    } @else {
+        color: #000;
+    }
+}
+
+#index-p3{
+    background: $color3;
+    @if (lightness($color3) < 50%){
+        color: #FFF;
+    } @else {
+        color: #000;
+    }
+}
 $btns:              // index 
     btn1 #FF0000,
     btn2 #00FF00,
