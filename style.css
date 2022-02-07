@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "JMH";
+  src: url(../font/JMHTypewriter.ttf);
+}
+body {
+  margin: 0;
+  background: #36393f;
+}
+
+.navbar, .navbar-sass {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.5%;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0px;
+}
+.navbar li, .navbar-sass li {
+  display: inline;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.navbar li a, .navbar-sass li a {
+  text-decoration: none;
+  color: #000;
+  font-family: "JMH";
+  color: #FFF;
+  font-size: 40px;
+}
+.navbar li a:hover, .navbar-sass li a:hover {
+  color: red;
+}
+
+@media screen and (max-width: 786px) {
+  .navbar, .navbar-sass {
+    flex-direction: column;
+    padding-top: 5%;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .navbar li, .navbar-sass li {
+    display: block;
+  }
+}
+.index-img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  width: 30%;
+}
+
+.index-p {
+  text-align: center;
+  color: blue;
+}
+
+.btn1 {
+  background: #FF0000;
+}
+
+.btn2 {
+  background: #00FF00;
+}
+
+.btn3 {
+  background: #0000FF;
+}
+
+.navbar-sass {
+  padding-top: 20%;
+}
+
+.a-1 {
+  opacity: 0.25;
+}
+
+.a-2 {
+  opacity: 0.5;
+}
+
+.a-3 {
+  opacity: 0.75;
+}
+
+.a-4 {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

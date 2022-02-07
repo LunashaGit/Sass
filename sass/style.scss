@@ -1,0 +1,97 @@
+@import 'variable.scss';
+
+@mixin button{ //NAV
+    &:hover{
+        color: red;
+    }
+}
+
+@font-face {
+    font-family: "JMH";
+    src: url(../font/JMHTypewriter.ttf);
+}
+
+body{ //ALL
+    margin: 0;
+    background: rgb(54, 57, 63);
+}
+
+.navbar{ //NAV
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.50%;
+    margin-block-start: 0;
+    margin-block-end: 0;    
+    padding-inline-start: 0px;
+    li{
+        display: inline;
+            margin-left: 5%;
+            margin-right: 5%;
+        a{
+            text-decoration: none;
+            color: #000;
+            font-family: "JMH";
+            color: #FFF;
+            font-size: 40px;
+            @include button()
+        }
+    }
+}
+
+@media #{$responsive}{ //index
+    .navbar{
+        flex-direction: column;
+        padding-top: 5%;
+        justify-content: space-between;
+        text-align: center;
+        li{
+            display: block;
+        }
+    }
+}
+
+.index-img  { //index
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+    width: 30%;
+}
+
+$ifelse: 1; // index
+
+.index-p{               //index
+    text-align: center;
+    @if $ifelse < 2{
+        color: blue;
+        @debug $ifelse;
+    } @else {
+        color: red;
+    }
+}
+
+$btns:              // index 
+    btn1 #FF0000,
+    btn2 #00FF00,
+    btn3 #0000FF;
+
+@each $btn in $btns { //index
+    .#{nth($btn, 1)}{
+        background: nth($btn, 2);
+        //@debug nth($btn, 1);
+    }
+}
+
+.navbar-sass{ //SASS
+    padding-top: 20%;
+    @extend .navbar
+}
+
+@for $i from 1 through 4 {
+    .a-#{$i}{
+        opacity: ($i * 0.25);
+    }
+} //SASS

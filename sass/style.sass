@@ -1,0 +1,43 @@
+@import 'variable.scss'
+
+
+body
+    margin: 0
+
+.navbar
+    list-style-type: none
+    margin: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 2.50%    
+    li
+        display: inline
+        margin-left: 5%
+        margin-right: 5%
+        a
+            text-decoration: none
+            color: #000
+        
+    
+
+
+@media #{$responsive}
+    .navbar
+        flex-direction: column
+        padding-top: 5%
+        justify-content: space-between
+        text-align: center
+        li
+            display: block
+            
+
+.index-img
+    display: block
+    margin-left: auto
+    margin-right: auto
+    padding-top: 5%
+
+.index-text
+    width: 30%
+    padding-left: 70%
