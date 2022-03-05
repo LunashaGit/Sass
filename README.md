@@ -1,7 +1,7 @@
 Sass Becode
 ===========
 
-https://lunashagit.github.io/Sass-BeCode/
+https://lunashagit.github.io/Sass/
 
 ![](img/sass.svg)
 
